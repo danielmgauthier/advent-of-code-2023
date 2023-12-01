@@ -19,59 +19,61 @@ if let storedInput = try? String(contentsOfFile: inputPath) {
     try? input.write(toFile: inputPath, atomically: false, encoding: .utf8)
 }
 
-switch day {
+let solution: Runnable = switch day {
 case 1:
-    Day1(input: input).run()
+    Day1(input: input)
 case 2:
-    Day2(input: input).run()
+    Day2(input: input)
 case 3:
-    Day3(input: input).run()
+    Day3(input: input)
 case 4:
-    Day4(input: input).run()
+    Day4(input: input)
 case 5:
-    Day5(input: input).run()
+    Day5(input: input)
 case 6:
-    Day6(input: input).run()
+    Day6(input: input)
 case 7:
-    Day7(input: input).run()
+    Day7(input: input)
 case 8:
-    Day8(input: input).run()
+    Day8(input: input)
 case 9:
-    Day9(input: input).run()
+    Day9(input: input)
 case 10:
-    Day10(input: input).run()
+    Day10(input: input)
 case 11:
-    Day11(input: input).run()
+    Day11(input: input)
 case 12:
-    Day12(input: input).run()
+    Day12(input: input)
 case 13:
-    Day13(input: input).run()
+    Day13(input: input)
 case 14:
-    Day14(input: input).run()
+    Day14(input: input)
 case 15:
-    Day15(input: input).run()
+    Day15(input: input)
 case 16:
-    Day16(input: input).run()
+    Day16(input: input)
 case 17:
-    Day17(input: input).run()
+    Day17(input: input)
 case 18:
-    Day18(input: input).run()
+    Day18(input: input)
 case 19:
-    Day19(input: input).run()
+    Day19(input: input)
 case 20:
-    Day20(input: input).run()
+    Day20(input: input)
 case 21:
-    Day21(input: input).run()
+    Day21(input: input)
 case 22:
-    Day22(input: input).run()
+    Day22(input: input)
 case 23:
-    Day23(input: input).run()
+    Day23(input: input)
 case 24:
-    Day24(input: input).run()
+    Day24(input: input)
 case 25:
-    Day25(input: input).run()
+    Day25(input: input)
 default:
-    break
+    fatalError()
 }
+
+solution.run()
 
 

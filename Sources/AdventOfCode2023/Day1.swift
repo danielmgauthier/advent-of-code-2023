@@ -2,10 +2,10 @@ import Foundation
 import Algorithms
 
 struct Day1: Runnable {
-    let lines = Self.input.lines
+    var input: String
     
     func partOne() -> String {
-        lines.map { line in
+        input.lines.map { line in
             [
                 line.first { character in
                     character.isWholeNumber
@@ -20,7 +20,7 @@ struct Day1: Runnable {
     }
     
     func partTwo() -> String {
-        lines.map { line in
+        input.lines.map { line in
             "\(getFirstDigit(in: line, reverseSearch: false))\(getFirstDigit(in: line, reverseSearch: true))".toInt()
         }
         .sum

@@ -5,6 +5,9 @@ import PackageDescription
 
 let package = Package(
     name: "AdventOfCode2023",
+    platforms: [
+        .macOS(.v12)
+    ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
          .package(url: "https://github.com/apple/swift-algorithms", from: "1.0.0"),

@@ -34,7 +34,7 @@ extension StringProtocol {
     }
     
     var lines: [String] {
-        components(separatedBy: "\n")
+        components(separatedBy: "\n").filter { !$0.isEmpty }
     }
 }
 

@@ -1,4 +1,5 @@
 protocol Runnable {
+    var input: String { get }
     func run()
     func partOne() -> String
     func partTwo() -> String

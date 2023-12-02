@@ -36,6 +36,10 @@ extension StringProtocol {
     var lines: [String] {
         components(separatedBy: "\n").filter { !$0.isEmpty }
     }
+    
+    func splitAndTrim(by separator: String) -> [String] {
+        components(separatedBy: separator).map { $0.trimmingCharacters(in: .whitespaces) }
+    }
 }
 
 extension Character {

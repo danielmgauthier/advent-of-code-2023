@@ -47,3 +47,8 @@ extension Character {
         self.wholeNumberValue!
     }
 }
+
+struct Point: Hashable {
+    var x: Int
+    var y: Int
+}

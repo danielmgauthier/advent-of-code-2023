@@ -38,7 +38,9 @@ extension StringProtocol {
     }
     
     func splitAndTrim(by separator: String) -> [String] {
-        components(separatedBy: separator).map { $0.trimmingCharacters(in: .whitespaces) }
+        components(separatedBy: separator)
+            .map { $0.trimmingCharacters(in: .whitespaces) }
+            .filter { !$0.isEmpty }
     }
 }
 

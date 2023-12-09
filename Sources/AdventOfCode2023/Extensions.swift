@@ -42,6 +42,14 @@ extension StringProtocol {
             .map { $0.trimmingCharacters(in: .whitespaces) }
             .filter { !$0.isEmpty }
     }
+    
+    func halveAndTrim(by separator: String) -> (String, String) {
+        let array = components(separatedBy: separator)
+            .map { $0.trimmingCharacters(in: .whitespaces) }
+            .filter { !$0.isEmpty }
+        
+        return (array[0], array[1])
+    }
 }
 
 extension Character {
@@ -53,4 +61,13 @@ extension Character {
 struct Point: Hashable {
     var x: Int
     var y: Int
+}
+
+func gcd(_ a: Int, _ b: Int) -> Int {
+    let remainder = abs(a) % abs(b)
+    if remainder != 0 {
+        return gcd(abs(b), remainder)
+    } else {
+        return abs(b)
+    }
 }

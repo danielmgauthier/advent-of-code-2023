@@ -1,7 +1,7 @@
 import Foundation
 import Algorithms
 
-class Node {
+fileprivate class Node {
     var label: String
     var leftNode: Node?
     var rightNode: Node?

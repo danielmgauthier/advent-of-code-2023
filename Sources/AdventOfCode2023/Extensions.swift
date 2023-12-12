@@ -58,9 +58,22 @@ extension Character {
     }
 }
 
-struct Point: Hashable {
+struct Point: Hashable, CustomStringConvertible {
     var x: Int
     var y: Int
+    
+    var adjacentPoints: [Point] {
+        [
+            .init(x: x - 1, y: y),
+            .init(x: x + 1, y: y),
+            .init(x: x, y: y - 1),
+            .init(x: x, y: y + 1)
+        ]
+    }
+    
+    var description: String {
+        "(\(x), \(y))"
+    }
 }
 
 func gcd(_ a: Int, _ b: Int) -> Int {

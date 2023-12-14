@@ -22,7 +22,7 @@ struct Range {
     var end: Int
 }
 
-struct Map {
+fileprivate struct Map {
     var pipes: [Pipe]
     
     init(string: String) {

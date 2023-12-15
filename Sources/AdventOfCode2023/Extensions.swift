@@ -74,6 +74,22 @@ struct Point: Hashable, CustomStringConvertible {
     var description: String {
         "(\(x), \(y))"
     }
+    
+    var up: Point {
+        .init(x: x, y: y - 1)
+    }
+    
+    var down: Point {
+        .init(x: x, y: y + 1)
+    }
+    
+    var left: Point {
+        .init(x: x - 1, y: y)
+    }
+    
+    var right: Point {
+        .init(x: x + 1, y: y)
+    }
 }
 
 func gcd(_ a: Int, _ b: Int) -> Int {

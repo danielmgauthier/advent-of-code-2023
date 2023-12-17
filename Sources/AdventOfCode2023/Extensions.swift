@@ -90,6 +90,10 @@ struct Point: Hashable, CustomStringConvertible {
     var right: Point {
         .init(x: x + 1, y: y)
     }
+    
+    func isInBounds(width: Int, height: Int) -> Bool {
+        x >= 0 && x < width && y >= 0 && y < height
+    }
 }
 
 func gcd(_ a: Int, _ b: Int) -> Int {
